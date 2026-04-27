@@ -1,0 +1,11 @@
+{
+  "name": "dumsor",
+  "private": true,
+  "scripts": {
+    "postinstall": "npm install --prefix lightoff-ghana",
+    "dev": "npm run dev --prefix lightoff-ghana",
+    "build": "npm run build --prefix lightoff-ghana",
+    "start": "npm run start --prefix lightoff-ghana",
+    "lint": "npm run lint --prefix lightoff-ghana"
+  }
+}
