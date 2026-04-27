@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import GroupBadge from "./GroupBadge";
 import TimeBlockCard from "./TimeBlockCard";
 import { formatDate, getCurrentOutage, getNextOutage, getTodayOutages, hasScheduleForDate, isSameTimetableDay } from "@/lib/schedule";
@@ -88,9 +89,12 @@ export default function ResultCard({ area }: { area: Area }) {
         )}
       </div>
 
-      <a href={`/report?area=${encodeURIComponent(area.name)}`} className="mt-4 inline-flex w-full justify-center rounded-2xl bg-slate-950 px-4 py-3 text-sm font-black text-white">
+      <Link
+        href={`/report?area=${encodeURIComponent(area.name)}`}
+        className="mt-4 inline-flex w-full justify-center rounded-2xl bg-slate-950 px-4 py-3 text-sm font-black text-white"
+      >
         Report wrong area
-      </a>
+      </Link>
     </section>
   );
 }
